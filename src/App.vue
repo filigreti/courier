@@ -1,8 +1,8 @@
 <template>
-  <main class="box-border w-screen px-16">
-    <div class="box-border w-full">
-      <div class="fixed pt-5 w-to8 bg-white flex justify-between">
-        <div class="flex items-center cursor-pointer">
+  <main class="w-screen px-16">
+    <div class="w-full">
+      <div class="fixed pt-5 w-to8 bg-white flex justify-between items-center">
+        <div @click="send" class="flex items-center cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-24"
@@ -87,11 +87,35 @@
           </svg>
           <h1 class="text-red-500 text-2xl pl-1 tracking-wide">Tracker</h1>
         </div>
+        <div class="flex" v-if="$store.state.email">
+          {{ $store.state.email }}
+          <div class="ml-5 text-blue-500 cursor-pointer" @click="logout">
+            Log Out
+          </div>
+        </div>
       </div>
       <router-view />
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  methods: {
+    send() {
+      if (this.$store.state.email) {
+        this.$router.push({ name: "OrdersMain" });
+      } else {
+        this.$router.push("/");
+      }
+    },
+    logout() {
+      this.$store.commit("giveEmail", "");
+      this.$router.push("/");
+    },
+  },
+};
+</script>
 
 <style>
 .bge {

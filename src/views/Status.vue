@@ -139,7 +139,7 @@
         Delivered
       </button>
     </div>
-    <div class="mt-16">
+    <div class="mt-16 px-8">
       <h1 class="text-xl tracking-wide text-gray-800 font-semibold pt-2 pb-4">
         Order Details
       </h1>
@@ -180,7 +180,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-16">
+    <div class="mt-16 px-8">
       <h1 class="text-xl tracking-wide text-gray-800 font-semibold pt-2 pb-4">
         Order Details
       </h1>

@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center items-center h-screen">
-    <div class="max-w-sm w-full">
+    <form @submit.prevent="login" class="max-w-sm w-full">
       <h1
         class="text-3xl text-center tracking-wide text-cliniBlue font-semibold"
       >
@@ -19,6 +19,8 @@
         <input
           type="text"
           class="bg-gray-300 focus:outline-none focus:border-blue-300 pl-5 text-xs leading-6 w-full mt-2 rounded-sm py-3"
+          required
+          v-model="email"
         />
       </div>
       <div class="mt-6">
@@ -28,6 +30,8 @@
         <input
           type="password"
           class="bg-gray-300 focus:outline-none focus:border-blue-300 pl-5 text-xs leading-6 w-full mt-2 rounded-sm py-3"
+          required
+          v-model="password"
         />
       </div>
       <div class="py-6 text-center">
@@ -46,10 +50,23 @@
       >
         SIGN UP
       </button>
-    </div>
+    </form>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$store.commit("giveEmail", this.email);
+      this.$router.push({ name: "OrdersMain" });
+    },
+  },
+};
 </script>

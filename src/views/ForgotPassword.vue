@@ -4,48 +4,41 @@
       <h1
         class="text-3xl text-center tracking-wide text-cliniBlue font-semibold"
       >
-        Login
+        Recover Password
       </h1>
       <p class="font-thin text-center text-xs text-gray-800 pt-1 tracking-wide">
-        Create an account as a Patient.
+        Enter your registered email address
       </p>
       <p class="font-thin text-center text-xs text-gray-800 tracking-wide">
-        Get health services at a finger snap!
+        and we will send you a link to reset your password
       </p>
-      <div class="mt-6">
+      <div class="mt-6 pb-8 border-b">
         <div class="text-xs text-indigo-900 text-opacity-75 font-medium">
           Email Address
         </div>
         <input
           type="text"
           class="bg-gray-300 focus:outline-none focus:border-blue-300 pl-5 text-xs leading-6 w-full mt-2 rounded-sm py-3"
+          placeholder="abc@gmail.com"
         />
       </div>
-      <div class="mt-6">
-        <div class="text-xs text-indigo-900 text-opacity-75 font-medium">
-          Password
-        </div>
-        <input
-          type="password"
-          class="bg-gray-300 focus:outline-none focus:border-blue-300 pl-5 text-xs leading-6 w-full mt-2 rounded-sm py-3"
-        />
-      </div>
-      <div class="py-6 text-center">
+
+      <button
+        class="bg-cliniBlue w-full py-3 text-white rounded-sm text-sm leading-6 mt-6"
+      >
+        SIGN UP
+      </button>
+      <div class="pt-6 text-center">
         <p class="font-thin text-center text-xs text-gray-800">
-          Forgot password ?
+          Did not receive a reset link ?
           <router-link
             tag="span"
             class="text-blue-500 font-normal cursor-pointer"
             to="/forgot-password"
-            >Reset</router-link
+            >Resend Link</router-link
           >
         </p>
       </div>
-      <button
-        class="bg-cliniBlue w-full py-3 text-white mt-1 rounded-sm text-sm leading-6"
-      >
-        SIGN UP
-      </button>
     </div>
   </div>
 </template>

@@ -1,7 +1,9 @@
 <template>
-  <main class="w-screen px-16">
+  <main class="w-screen lg:px-16 px-6">
     <div class="w-full">
-      <div class="fixed pt-5 w-to8 bg-white flex justify-between items-center">
+      <div
+        class="fixed pt-5 w-to8 bg-white flex flex-wrap justify-between items-center"
+      >
         <div @click="send" class="flex items-center cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"

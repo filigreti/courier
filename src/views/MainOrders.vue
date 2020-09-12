@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 class="text-xl tracking-wide text-gray-800 font-semibold">Orders</h1>
-    <div class="flex mt-8">
+    <div class="flex mt-8 flex-wrap">
       <div
         @click="
           $router.push({
@@ -76,7 +76,7 @@
             },
           })
         "
-        class="ml-16 w-48 flex flex-col cursor-pointer"
+        class="lg:ml-16 lg:mt-0 mt-5 w-48 flex flex-col cursor-pointer"
       >
         <div
           class="border-white border shadow-md rounded inline-block hover:bg-gray-100 w-full h-48 p-4"

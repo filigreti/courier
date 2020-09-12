@@ -17,8 +17,12 @@
       </div>
     </div>
 
-    <div class="max-w-md w-full mx-auto flex justify-between items-center mt-6">
-      <div class="relative flex flex-col justify-center items-center">
+    <div
+      class="lg:max-w-md w-full lg:mx-auto lg:flex justify-between lg:flex-row lg:items-center mt-6"
+    >
+      <div
+        class="relative flex lg:flex-col flex-row lg:justify-center items-center"
+      >
         <div
           :class="newOrange ? 'bg-orange-500' : 'bg-gray-400'"
           class="w-10 h-10 flex justify-center items-center rounded-full"
@@ -38,12 +42,16 @@
             />
           </svg>
         </div>
-        <div class="text-xs absolute w-40 bottom-0 -mb-8 font-light">
+        <div
+          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
+        >
           Item Picked for Delivery
         </div>
       </div>
-      <div style="height: 2px" class="flex-1 bg-gray-400"></div>
-      <div class="relative flex flex-col justify-center items-center">
+      <div style="height: 2px" class="flex-1 bg-gray-400 lg:flex hidden"></div>
+      <div
+        class="relative flex lg:mt-0 mt-3 lg:flex-col flex-row lg:justify-center items-center"
+      >
         <div
           :class="newBlue ? 'bg-blue-500' : 'bg-gray-400'"
           class="w-10 h-10 flex justify-center items-center rounded-full"
@@ -65,14 +73,17 @@
         </div>
 
         <div
-          class="text-xs absolute w-40 text-center bottom-0 -mb-8 font-light"
+          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
         >
           On Transit
         </div>
       </div>
 
-      <div style="height: 2px" class="flex-1 bg-gray-400"></div>
-      <div class="relative flex flex-col justify-center items-center">
+      <div style="height: 2px" class="flex-1 bg-gray-400 lg:flex hidden"></div>
+
+      <div
+        class="relative flex lg:mt-0 mt-3 lg:flex-col flex-row lg:justify-center items-center"
+      >
         <div
           :class="newGreen ? 'bg-green-500' : 'bg-gray-400'"
           class="w-10 h-10 flex justify-center items-center rounded-full"
@@ -94,7 +105,7 @@
         </div>
 
         <div
-          class="text-xs absolute w-40 text-center bottom-0 -mb-8 font-light"
+          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
         >
           Item Delivered
         </div>
@@ -116,7 +127,9 @@
         </div>
       </div>
     </div>
-    <div class="max-w-2xl mt-10 grid grid-cols-3 col-gap-10 w-full mx-auto">
+    <div
+      class="max-w-2xl mt-10 grid lg:grid-cols-3 lg:col-gap-10 lg:row-gap-0 row-gap-5 w-full mx-auto"
+    >
       <button
         :class="newOrange ? 'bg-orange-500' : 'bg-gray-400'"
         @click.once="state += 1"
@@ -139,27 +152,27 @@
         Delivered
       </button>
     </div>
-    <div class="mt-16 px-8">
+    <div class="mt-16 lg:px-8">
       <h1 class="text-xl tracking-wide text-gray-800 font-semibold pt-2 pb-4">
         Order Details
       </h1>
       <div>
         <div
-          class="bg-black text-white px-12 py-3 leading-6 flex justify-between"
+          class="bg-black text-white lg:px-12 px-3 py-3 leading-6 flex justify-between"
         >
           <div class="text-xs">Shipping Information</div>
           <div class="text-xs">
             Order No: <span class="pl-5">23455543</span>
           </div>
         </div>
-        <div class="shadow px-12 pt-6 border pb-8">
-          <div class="flex pb-6">
+        <div class="shadow lg:px-12 p-3 pt-6 border pb-8">
+          <div class="flex lg:flex-row flex-col pb-6">
             <img
               class="w-32 h-32 object-cover"
               src="https://static01.nyt.com/images/2020/05/31/well/31well-drugs/merlin_172684503_3439c699-88e7-482a-bc0e-4a42187f1847-mediumSquareAt3X.jpg"
               alt=""
             />
-            <div class="ml-5">
+            <div class="lg:ml-5 lg:mt-0 mt-3">
               <h1 class="text-sm">Hydrocloroquine</h1>
               <p class="text-xs">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -180,20 +193,20 @@
         </div>
       </div>
     </div>
-    <div class="mt-16 px-8">
+    <div class="mt-16 lg:px-8">
       <h1 class="text-xl tracking-wide text-gray-800 font-semibold pt-2 pb-4">
         Order Details
       </h1>
       <div>
         <div
-          class="bg-black text-white px-12 py-3 leading-6 flex justify-between"
+          class="bg-black text-white lg:px-12 px-3 py-3 leading-6 flex justify-between+"
         >
           <div class="text-xs">Shipping Information</div>
           <div class="text-xs">
             Order No: <span class="pl-5">23455543</span>
           </div>
         </div>
-        <div class="shadow px-12 pt-6 border pb-8">
+        <div class="shadow lg:px-12 px-3 pt-6 border pb-8">
           <div class="text-xs">
             Store: <span class="pl-5">Phantom Pharmacy</span>
           </div>

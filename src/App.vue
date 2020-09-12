@@ -2,7 +2,7 @@
   <main class="w-screen lg:px-16 px-6">
     <div class="w-full">
       <div
-        class="fixed pt-5 w-to8 bg-white flex flex-wrap justify-between items-center"
+        class="fixed pt-5 w-to8 bg-white flex flex-wrap justify-between items-center z-10"
       >
         <div @click="send" class="flex items-center cursor-pointer">
           <svg

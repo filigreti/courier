@@ -73,7 +73,7 @@
         </div>
 
         <div
-          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
+          class="text-xs lg:absolute lg:text-center w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
         >
           On Transit
         </div>
@@ -105,7 +105,7 @@
         </div>
 
         <div
-          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light"
+          class="text-xs lg:absolute w-40 lg:bottom-0 lg:-mb-8 lg:ml-0 ml-5 font-light lg:text-center"
         >
           Item Delivered
         </div>
@@ -123,7 +123,7 @@
       <div>
         <h1 class="text-xs text-center text-gray-700">To</h1>
         <div class="text-xs text-center mt-1 bottom-0 font-light">
-          Phantasy Pharmacy
+          1, Zaha street Lokoja
         </div>
       </div>
     </div>

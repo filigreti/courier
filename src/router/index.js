@@ -30,7 +30,7 @@ const routes = [
 				component: () => import('../views/OrdersTable.vue'),
 			},
 			{
-				path: 'status/:id',
+				path: 'item/:id',
 				name: 'OrderStatus',
 				component: () => import('../views/Status.vue'),
 			},

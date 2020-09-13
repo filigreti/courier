@@ -132,21 +132,21 @@
     >
       <button
         :class="newOrange ? 'bg-orange-500' : 'bg-gray-400'"
-        @click.once="state += 1"
+        @click.once="add"
         class="text-xs py-3 rounded-sm text-white focus:outline-none"
       >
         Picked For Delivery
       </button>
       <button
         :class="newBlue ? 'bg-blue-500' : 'bg-gray-400'"
-        @click.once="state += 1"
+        @click.once="add"
         class="text-xs py-3 rounded-sm text-white focus:outline-none bg-gray-400"
       >
         On Transit
       </button>
       <button
         :class="newGreen ? 'bg-green-500' : 'bg-gray-400'"
-        @click.once="state += 1"
+        @click.once="add"
         class="text-xs py-3 rounded-sm text-white bg-gray-400 focus:outline-none"
       >
         Delivered
@@ -233,49 +233,48 @@ export default {
   data() {
     return {
       status: null,
-      state: 0,
+      current: 0,
       newOrange: false,
       newBlue: false,
       newGreen: false,
     };
   },
+  methods: {
+    add() {
+      this.current += 1
+    }
+  },
   computed: {
     statusText() {
-      switch (this.state) {
-        case 0:
-          return {
-            text: "Not Shipped",
-            textColor: "text-gray-500",
-            background: "bg-yellow-500",
-          };
-          break;
-        case 1:
-          this.newOrange = true;
-          return {
-            text: "Item Shipped",
-            textColor: "text-orange-400",
-            background: "bg-orange-500",
-          };
-          break;
-        case 2:
-          this.newBlue = true;
 
-          return {
-            text: "On Transit",
-            textColor: "text-blue-500",
-            background: "bg-blue-500",
-          };
-          break;
-        case 3:
-          this.newGreen = true;
-          return {
-            text: "Delivered",
-            textColor: "text-green-600",
-            background: "bg-green-600",
-          };
-          break;
-        default:
-          break;
+      if (this.current == 0) {
+        return {
+          text: "Not Shipped",
+          textColor: "text-gray-500",
+          background: "bg-yellow-500",
+        };
+      } else if (this.current == 1) {
+        this.newOrange = true;
+        return {
+          text: "Item Shipped",
+          textColor: "text-orange-400",
+          background: "bg-orange-500",
+        };
+      } else if (this.current == 2) {
+        this.newBlue = true;
+        return {
+          text: "On Transit",
+          textColor: "text-blue-500",
+          background: "bg-blue-500",
+        };
+      } else if (this.current == 3) {
+        this.newGreen = true;
+
+        return {
+          text: "Delivered",
+          textColor: "text-green-600",
+          background: "bg-green-600",
+        };
       }
     },
   },
